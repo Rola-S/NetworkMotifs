@@ -71,9 +71,8 @@ for triangle in getting_Triangles(G):
 
 for triangle in trianglesList:
     triangleCode = TRICODE_TO_NAME[tricode(G, triangle[0], triangle[1], triangle[2])]
-    jsonList.append({'x':int(triangle[0]), 'y':int(triangle[1]), 'z':int(triangle[2]), 'id':triangleCode,
-     'connections': [int(triangle[0]), int(triangle[1]), int(triangle[2])]})
-
+    jsonList.append({'x':int(triangle[0]), 'y':int(triangle[1]), 'z':int(triangle[2]), 'id':triangleCode})
+# 'connections': [int(triangle[0]), int(triangle[1]), int(triangle[2])]}
 
         # json.dump((triangle[0], triangle[1], triangle[2], triangleCode), json_file)
 with open('triads.json', 'a') as json_file:
